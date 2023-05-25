@@ -2,10 +2,15 @@ import java.util.Scanner;
 
 public class Bloque2 { 
 	public static double factorial(int numero) {
+		//Creamos el factorial
         double factorial = 1;
+        
+        //Realizamos un for del número y que se guarde en el factorial
+        //El factorial es el factorial por las vueltas que llevamos
         for (int i = 1; i <= numero; i++) {
             factorial = factorial * i;
         }
+        //Devolvemos el factorial
         return factorial;
     }
 	
