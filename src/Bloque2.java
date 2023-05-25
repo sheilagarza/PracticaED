@@ -1,27 +1,25 @@
 import java.util.Scanner;
 
-public class Bloque2 { }
-
-class FactorialNumero {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		
-		int numero;
+public class Bloque2 { 
+	public static double factorial(int numero) {
         double factorial = 1;
-		
-        //Pedir que introduzca un número mayor o igual a 0
-        do { 
-            System.out.print("Introduce un numero entero (tiene que ser mayor o igual a 0): ");
-            numero = teclado.nextInt();
-        } while (numero < 0);
-
-        //multiplicar todos los números desde 1 hasta n
-        //el resultado de las multiplicaciones se acumula en la variable factorial
         for (int i = 1; i <= numero; i++) {
             factorial = factorial * i;
         }
-		
-        //Mostrar el resultado
-        System.out.printf("%d! = %.0f %n", numero, factorial);                                                         
+        return factorial;
     }
+	
+	public static boolean esPrimo(int numero) {
+		  // El 0, 1 y 4 no son primos
+		  if (numero == 0 || numero == 1 || numero == 4) {
+		    return false;
+		  }
+		  for (int x = 2; x < numero / 2; x++) {
+		    // Si es divisible por cualquiera de estos números, no es primo
+		    if (numero % x == 0)
+		      return false;
+		  }
+		  // Si no se pudo dividir por ninguno de los de arriba, sí es primo
+		  return true;
+		}
 }
