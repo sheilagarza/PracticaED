@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/**
+ * @author Sheila
+ * Calcular el factorial de un número, le pasamos el número como parámetro.
+ * Reciba un número y devuelva si es primo o no.
+ */
+
 public class Bloque2 { 
 	public static double factorial(int numero) {
 		//Creamos el factorial
